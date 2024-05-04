@@ -10,9 +10,14 @@ on:
     branches: [ "Aula_2" ]
 
 jobs:
-
-  test:
-    runs-on: ubuntu-latest
+    test:
+      runs-on: ubuntu-latest
+      env:
+        HOST: localhost
+        PORT: 5432
+        USER: root
+        PASSWORD: root
+        DBNAME: root
     steps:
     - uses: actions/checkout@v4
 
